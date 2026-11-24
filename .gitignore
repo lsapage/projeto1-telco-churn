@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Ambiente virtual (recriado com `uv sync`)
+.venv/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Testes e qualidade
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Dados gerados (o bruto em data/raw é versionado)
+data/processed/*
+!data/processed/.gitkeep
+
+# Rastreamento de experimentos (se usarmos MLflow)
+mlruns/
+mlartifacts/
+mlflow.db
+
+# Segredos e editor
+.env
+.vscode/
+.idea/
+
+# Sistema operacional
+Thumbs.db
+.DS_Store
