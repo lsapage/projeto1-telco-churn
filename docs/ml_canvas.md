@@ -48,7 +48,7 @@ Documento da fase de *Business Understanding* (CRISP-DM). Define o problema, que
 | Variável | Motivo |
 |---|---|
 | `Churn Label`, `Churn Reason` | Vazamento: são o próprio alvo ou consequência dele |
-| `Churn Score` | Saída de outro modelo (IBM SPSS); usado só como **benchmark externo** |
+| `Churn Score` | Saída de outro modelo (IBM SPSS); seria vazamento |
 | `CLTV` | Estimativa corporativa, não comportamento do cliente |
 | `CustomerID`, `Count`, `Country`, `State`, `Lat Long` | Identificador, constantes ou redundantes |
 
