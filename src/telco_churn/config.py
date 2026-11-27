@@ -18,7 +18,9 @@ TARGET = "Churn Value"  # 1 = cliente cancelou
 
 # Colunas fora das features
 LEAKAGE_COLS = ["Churn Label", "Churn Reason", "Churn Score"]
-NO_INFO_COLS = ["CustomerID", "Count", "Country", "State", "Lat Long"]
+NO_INFO_COLS = ["CustomerID", "Count", "Country", "State"]
+GEO_COLS = ["City", "Zip Code", "Lat Long", "Latitude", "Longitude"]
 OUT_OF_SCOPE_COLS = ["CLTV"]
+SENSITIVE_COLS = ["Gender"]  # fora das features, mas usada na auditoria de fairness
 
-DROP_COLS = LEAKAGE_COLS + NO_INFO_COLS + OUT_OF_SCOPE_COLS
+DROP_COLS = LEAKAGE_COLS + NO_INFO_COLS + GEO_COLS + OUT_OF_SCOPE_COLS + SENSITIVE_COLS
