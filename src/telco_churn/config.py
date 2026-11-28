@@ -13,6 +13,9 @@ MODELS_DIR = PROJECT_ROOT / "models"
 # Reprodutibilidade
 SEED = 42
 
+# Capacidade de abordagem: fração dos clientes de maior risco na lista de retenção
+TOP_K = 0.2
+
 # Alvo
 TARGET = "Churn Value"  # 1 = cliente cancelou
 
