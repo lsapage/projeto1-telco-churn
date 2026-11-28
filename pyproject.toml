@@ -33,3 +33,11 @@ notebooks = [
 
 [tool.uv]
 default-groups = ["dev", "notebooks"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-v", "--tb=short"]
+
+[tool.taskipy.tasks]
+test = "pytest"
+test-cov = "pytest --cov=telco_churn --cov-report=term-missing"
