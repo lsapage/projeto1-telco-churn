@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-from telco_churn.config import DROP_COLS, TARGET
+from telco_churn.config import CATEGORICAL_COLS, DROP_COLS, NUMERIC_COLS, TARGET
 from telco_churn.data import NO_SERVICE, clean, split_features_target
 
 # clean()
@@ -63,5 +63,6 @@ def test_formato_com_dado_real(df_real):
     X, y = split_features_target(df_real)
 
     assert len(X) == len(y) == len(df_real)  # nenhuma linha perdida
-    assert X.shape[1] == 18  # contrato com o pipeline
+    # Contrato com o pipeline: exatamente as colunas que o pré-processador espera
+    assert set(X.columns) == set(NUMERIC_COLS + CATEGORICAL_COLS)
     assert set(y.unique()) == {0, 1}

@@ -27,3 +27,26 @@ OUT_OF_SCOPE_COLS = ["CLTV"]
 SENSITIVE_COLS = ["Gender"]  # fora das features, mas usada na auditoria de fairness
 
 DROP_COLS = LEAKAGE_COLS + NO_INFO_COLS + GEO_COLS + OUT_OF_SCOPE_COLS + SENSITIVE_COLS
+
+# Features que entram no modelo, separadas pelo tratamento que recebem
+NUMERIC_COLS = ["Tenure Months", "Monthly Charges", "Total Charges"]
+CATEGORICAL_COLS = [
+    # Perfil do cliente
+    "Senior Citizen",
+    "Partner",
+    "Dependents",
+    # Serviços contratados
+    "Phone Service",
+    "Multiple Lines",
+    "Internet Service",
+    "Online Security",
+    "Online Backup",
+    "Device Protection",
+    "Tech Support",
+    "Streaming TV",
+    "Streaming Movies",
+    # Contrato e cobrança
+    "Contract",
+    "Paperless Billing",
+    "Payment Method",
+]
